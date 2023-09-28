@@ -19,7 +19,7 @@ class _MyCustomEmailFieldState extends State<MyCustomEmailField> {
     return TextFormField(
       controller: widget.controller,
       decoration: InputDecoration(
-        labelText: 'Email',
+        labelText: 'E-mail',
         errorText: _emailErrorText,
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.grey),

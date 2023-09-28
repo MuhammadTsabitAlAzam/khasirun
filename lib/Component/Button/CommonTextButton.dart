@@ -11,12 +11,9 @@ class CommonTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      child:  TextButton(
+    return TextButton(
           onPressed: onPressed, // Gunakan onPressed yang diterima dari luar
           child: Text(label),
-        ),
     );
   }
 }

@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class PasswordField extends StatefulWidget {
   final TextEditingController controller;
+  final String? label;
 
   PasswordField({
     required this.controller,
+    this.label,
   });
 
   @override
@@ -25,9 +27,9 @@ class _PasswordFieldState extends State<PasswordField> {
         focusedBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.black),
         ),
-        labelText: 'Password',
+        labelText: widget.label ?? 'Password',
         suffixIcon: IconButton(
-          icon: Icon(_obscurePassword ? Icons.visibility : Icons.visibility_off),
+          icon: Icon(_obscurePassword ? Icons.visibility_off : Icons.visibility),
           onPressed: () {setState(() {_obscurePassword = !_obscurePassword;});},
         ),
       ),
